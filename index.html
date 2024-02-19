@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+     <!-- Definindo o caminho para o CSS: -->
+     <link a href="style.css" rel="stylesheet">
+
+     <!-- Importando o ícone que será usado como botão "remover": -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+     <!-- Estou pensando em usar essa fonte: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <main>
+        <div id="user-input">
+            <input type="text" id="insert-task" placeholder="Insira aqui a sua tarefa."/>
+            <button id="add-task">Adicionar</button>
+        </div>
+        <div id="task-list">
+        <!-- Trouxe a tag task-list acima para a div de container. -->
+            <ul>
+                <!-- Instrução do exercício: Adicione caixas de seleção, uma para cada item da lista.
+                Adicione botões de remover (“x“) para cada item da lista. -->
+                <li><input type="checkbox" class="check-task"/>Fazer uma coisa. <i class='bx bxs-x-square'></i></li>
+                <li><input type="checkbox" class="check-task"/>Fazer outra coisa. <i class='bx bxs-x-square'></i></li>
+                <li><input type="checkbox" class="check-task"/>Fazer mais outra coisa. <i class='bx bxs-x-square'></i></li>
+                <li><input type="checkbox" class="check-task"/>Limpar a caixa de areia do gato. <i class='bx bxs-x-square'></i></li>
+            </ul>
+        </div>
+    </main>
+
+</body>
+</html>

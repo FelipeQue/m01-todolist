@@ -1,0 +1,67 @@
+:root {
+    /* Para o caso de utilizar variáveis para as cores: */
+    --backgroundgrey: #dee2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Klee One', cursive;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+.header {
+    width: 100vw;
+    background-color: var(--backgroundgrey);
+    height: 4em;
+    padding: 0 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: black;
+    font-size: 2em;
+}
+
+main {
+    padding-top: 3em;
+}
+
+#user-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#insert-task {
+    margin-right: 1em;
+    width: 16em;
+}
+
+/* Coloquei a linha de código abaixo para que o texto placeholder na caixa de texto desapareça quando o usuário clicar nela: */
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* Instrução do exercício: Com CSS, remova os pontos da lista e o espaçamento à esquerda. */
+ul {
+    list-style-type: none;
+}
+
+#task-list {
+    padding-top: 2em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.check-task {
+    margin-right: 20px;
+}
+
