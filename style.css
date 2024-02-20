@@ -1,5 +1,4 @@
 :root {
-    /* Para o caso de utilizar variáveis para as cores: */
     --backgroundgrey: #dee2e6;
 }
 
@@ -9,7 +8,8 @@
     box-sizing: border-box;
     text-decoration: none;
     font-size: large;
-    font-family: 'Klee One', cursive;
+    /* font-family: 'Klee One', cursive; */
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
     font-weight: 400;
     scroll-behavior: smooth;
 }
@@ -33,6 +33,7 @@ main {
     padding-top: 3em;
 }
 
+/* Quero o campo de texto e botão de adicionar lado a lado: */
 #user-input {
     display: flex;
     justify-content: center;
@@ -41,7 +42,8 @@ main {
 
 #insert-task {
     margin-right: 1em;
-    width: 16em;
+    width: 300px;
+    padding: 9px;
 }
 
 /* Coloquei a linha de código abaixo para que o texto placeholder na caixa de texto desapareça quando o usuário clicar nela: */
@@ -49,7 +51,35 @@ input:focus::placeholder {
     color: transparent;
 }
 
-/* Instrução do exercício: Com CSS, remova os pontos da lista e o espaçamento à esquerda. */
+/* Botão de adicionar tarefa com um pouco mais de customização */
+#add-task {
+    background-color: #222;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 44px;
+    min-width: 10px;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    width: auto;
+}
+
+#add-task:hover {
+    opacity: .75;
+}
+#add-task:focus {
+    opacity: .75;
+}
+
+/* Remove os pontos da lista e o espaçamento à esquerda. */
 ul {
     list-style-type: none;
 }
@@ -61,7 +91,30 @@ ul {
     justify-content: center;
 }
 
-.check-task {
-    margin-right: 20px;
+.todo-item {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.todo-item-text {
+    /* Optei pelo texto alinhado à esquerda: */
+    text-align: left;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.check-task {
+    margin-right: 10px;
+}
+
+/* O código abaixo é para remover a aparência padrão dos elementos botão, que serão customizados caso a caso: */
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
