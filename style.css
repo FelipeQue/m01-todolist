@@ -108,6 +108,10 @@ ul {
     margin-right: 10px;
 }
 
+.check-task:checked + .todo-item-text {
+    text-decoration: line-through;
+}
+
 /* O código abaixo é para remover a aparência padrão dos elementos botão, que serão customizados caso a caso: */
 button {
     background: none;
