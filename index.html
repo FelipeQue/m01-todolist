@@ -6,7 +6,8 @@
     <title>Lista de Tarefas</title>
      <!-- Definindo o caminho para o CSS: -->
      <link a href="style.css" rel="stylesheet">
-
+     <!-- Definindo o caminho para o Javascript: -->
+     <script src="script.js" defer></script>
      <!-- Importando o ícone que será usado como botão "remover": -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -21,7 +22,9 @@
             <button id="add-task" title="Adicionar tarefa">Adicionar</button>
         </div>
         <div id="task-list">
-            <ul>
+        <!-- A tag div tem o id task-list para ser usada na customização pelo CSS. -->
+            <ul id="actual-list">
+            <!-- A tag ul tem o id actual-list para ser usada pelo javascript. -->
                 <li class="todo-item">
                     <input type="checkbox" class="check-task"/>
                     <span class="todo-item-text">Estudar HTML e CSS.</span>
