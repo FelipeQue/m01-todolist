@@ -137,7 +137,6 @@ ul {
     height: 1.2em; 
 }
 
-/* Estilo tachado ao marcar o checkbox: */
 .check-task:checked + .todo-item-text {
     text-decoration: line-through;
     opacity: .3;
