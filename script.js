@@ -43,7 +43,6 @@ addTaskButton.addEventListener('click', function() {
 // Aplicar a funcionalidade do botão de remover uma tarefa para os itens que já existem na página inicialmente:
 // Instanciar todos os botões de apagar que já existem na página inicialmente e acrescentar um event listener para cada botão:
 let deleteButtons = document.querySelectorAll(".delete-button");
-
 deleteButtons.forEach(button => {
   button.addEventListener("click", () => {
     // Encontrar o elemento mãe <li>:
