@@ -2,6 +2,7 @@
 let addTaskButton = document.getElementById("add-task");
 let taskList = document.getElementById("actual-list");
 let insertTask = document.getElementById("insert-task");
+let taskAmount;
 
 // Eu quero que o enter também provoque o clique do botão adicionar:
 insertTask.addEventListener("keypress", function(event) {
@@ -33,9 +34,11 @@ addTaskButton.addEventListener('click', function() {
           // console.log("Botão de deletar está sendo clicado.")
           if (confirm("Tem certeza que deseja apagar esta tarefa?") == true) {
             newItem.remove();
+            updateTaskAmount()
           };
         });
         taskList.appendChild(newItem);
+        updateTaskAmount();
         newTask.value = "";        
     };
 });
@@ -50,7 +53,29 @@ deleteButtons.forEach(button => {
     if (todoItem) {
       if (confirm("Tem certeza que deseja apagar esta tarefa?") == true) {
         todoItem.remove();
+        updateTaskAmount();
       };
     };
   });
 });
+
+function updateTaskAmount() {
+  let todoItems = document.getElementsByClassName("todo-item");
+  taskAmount = todoItems.length;
+  if (taskAmount == 0) {
+    let emptyMessage = document.createElement("p");
+    emptyMessage.innerText = "Você não tem nenhuma tarefa."
+    emptyMessage.id = "empty-message"
+    document.getElementById("task-list").appendChild(emptyMessage);
+  } else {
+    let emptyMessage = document.getElementById("empty-message");
+    if (emptyMessage) {
+      emptyMessage.remove();
+    };
+  }
+  let taskAmountCounter = document.getElementById("task-amount");
+  taskAmountCounter.innerText = taskAmount;
+}
+
+// Chamamos a função também aqui para que a página já carregue com um valor inicial referente aos items que estão no HTML:
+updateTaskAmount()
